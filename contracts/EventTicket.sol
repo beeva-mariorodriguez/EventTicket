@@ -15,7 +15,7 @@ contract EventTicket {
         freeTickets--;
         claimedTickets[eh] = true;
     }
-    function checkTicket(bytes32 eh) public returns (bool) {
+    function checkTicket(bytes32 eh) public view returns (bool) {
         return claimedTickets[eh];
     }
 }
