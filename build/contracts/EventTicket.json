@@ -69,6 +69,24 @@
       "type": "constructor"
     },
     {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "eh",
+          "type": "bytes32"
+        }
+      ],
+      "name": "TicketClaimed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "NoMoreTickets",
+      "type": "event"
+    },
+    {
       "constant": false,
       "inputs": [
         {
@@ -102,20 +120,20 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b506002600160026101000a81548161ffff021916908361ffff160217905550600160029054906101000a900461ffff16600160006101000a81548161ffff021916908361ffff1602179055506040805190810160405280600381526020017f54434b0000000000000000000000000000000000000000000000000000000000815250600290805190602001906100a79291906100ad565b50610152565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100ee57805160ff191683800117855561011c565b8280016001018555821561011c579182015b8281111561011b578251825591602001919060010190610100565b5b509050610129919061012d565b5090565b61014f91905b8082111561014b576000816000905550600101610133565b5090565b90565b610442806101616000396000f300608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde031461007d57806318160ddd1461010d5780635aaa8be81461014057806360f67b5714610173578063ba91f717146101bc578063ed9d4ce714610205575b600080fd5b34801561008957600080fd5b50610092610236565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100d25780820151818401526020810190506100b7565b50505050905090810190601f1680156100ff5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561011957600080fd5b506101226102d4565b604051808261ffff1661ffff16815260200191505060405180910390f35b34801561014c57600080fd5b506101556102e8565b604051808261ffff1661ffff16815260200191505060405180910390f35b34801561017f57600080fd5b506101a260048036038101908080356000191690602001909291905050506102fc565b604051808215151515815260200191505060405180910390f35b3480156101c857600080fd5b506101eb600480360381019080803560001916906020019092919050505061031c565b604051808215151515815260200191505060405180910390f35b34801561021157600080fd5b50610234600480360381019080803560001916906020019092919050505061034d565b005b60028054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102cc5780601f106102a1576101008083540402835291602001916102cc565b820191906000526020600020905b8154815290600101906020018083116102af57829003601f168201915b505050505081565b600160029054906101000a900461ffff1681565b600160009054906101000a900461ffff1681565b60006020528060005260406000206000915054906101000a900460ff1681565b6000806000836000191660001916815260200190815260200160002060009054906101000a900460ff169050919050565b60001515600080836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561038757600080fd5b6000600160009054906101000a900461ffff1661ffff161115156103aa57600080fd5b6001600081819054906101000a900461ffff16809291906001900391906101000a81548161ffff021916908361ffff160217905550506001600080836000191660001916815260200190815260200160002060006101000a81548160ff021916908315150217905550505600a165627a7a72305820ec7d9af0686f03ecf0ca6600d4a55b05a314ff3bddf85958efb04fe4ef461d2a0029",
-  "deployedBytecode": "0x608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde031461007d57806318160ddd1461010d5780635aaa8be81461014057806360f67b5714610173578063ba91f717146101bc578063ed9d4ce714610205575b600080fd5b34801561008957600080fd5b50610092610236565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100d25780820151818401526020810190506100b7565b50505050905090810190601f1680156100ff5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561011957600080fd5b506101226102d4565b604051808261ffff1661ffff16815260200191505060405180910390f35b34801561014c57600080fd5b506101556102e8565b604051808261ffff1661ffff16815260200191505060405180910390f35b34801561017f57600080fd5b506101a260048036038101908080356000191690602001909291905050506102fc565b604051808215151515815260200191505060405180910390f35b3480156101c857600080fd5b506101eb600480360381019080803560001916906020019092919050505061031c565b604051808215151515815260200191505060405180910390f35b34801561021157600080fd5b50610234600480360381019080803560001916906020019092919050505061034d565b005b60028054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102cc5780601f106102a1576101008083540402835291602001916102cc565b820191906000526020600020905b8154815290600101906020018083116102af57829003601f168201915b505050505081565b600160029054906101000a900461ffff1681565b600160009054906101000a900461ffff1681565b60006020528060005260406000206000915054906101000a900460ff1681565b6000806000836000191660001916815260200190815260200160002060009054906101000a900460ff169050919050565b60001515600080836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561038757600080fd5b6000600160009054906101000a900461ffff1661ffff161115156103aa57600080fd5b6001600081819054906101000a900461ffff16809291906001900391906101000a81548161ffff021916908361ffff160217905550506001600080836000191660001916815260200190815260200160002060006101000a81548160ff021916908315150217905550505600a165627a7a72305820ec7d9af0686f03ecf0ca6600d4a55b05a314ff3bddf85958efb04fe4ef461d2a0029",
-  "sourceMap": "25:574:0:-;;;190:110;8:9:-1;5:2;;;30:1;27;20:12;5:2;190:110:0;235:1;221:11;;:15;;;;;;;;;;;;;;;;;;260:11;;;;;;;;;;;246;;:25;;;;;;;;;;;;;;;;;;281:12;;;;;;;;;;;;;;;;;;:4;:12;;;;;;;;;;;;:::i;:::-;;25:574;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "25:574:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;166:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;166:18:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;166:18:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;135:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;135:25:0;;;;;;;;;;;;;;;;;;;;;;;;;;;104;;8:9:-1;5:2;;;30:1;27;20:12;5:2;104:25:0;;;;;;;;;;;;;;;;;;;;;;;;;;;52:46;;8:9:-1;5:2;;;30:1;27;20:12;5:2;52:46:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;495:102;;8:9:-1;5:2;;;30:1;27;20:12;5:2;495:102:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;305:185;;8:9:-1;5:2;;;30:1;27;20:12;5:2;305:185:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;166:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;135:25::-;;;;;;;;;;;;;:::o;104:::-;;;;;;;;;;;;;:::o;52:46::-;;;;;;;;;;;;;;;;;;;;;;:::o;495:102::-;549:4;572:14;:18;587:2;572:18;;;;;;;;;;;;;;;;;;;;;;;;;;;565:25;;495:102;;;:::o;305:185::-;385:5;363:27;;:14;:18;378:2;363:18;;;;;;;;;;;;;;;;;;;;;;;;;;;:27;;;355:36;;;;;;;;423:1;409:11;;;;;;;;;;;:15;;;401:24;;;;;;;;435:11;;:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;479:4;458:14;:18;473:2;458:18;;;;;;;;;;;;;;;;;;:25;;;;;;;;;;;;;;;;;;305:185;:::o",
-  "source": "pragma solidity ^0.4.18;\ncontract EventTicket {\n    mapping(bytes32 => bool) public claimedTickets;\n    uint16 public freeTickets;\n    uint16 public totalSupply;\n    string public name;\n    constructor() public {\n        totalSupply = 2;\n        freeTickets = totalSupply;\n        name = \"TCK\";\n    }\n    function claimTicket(bytes32 eh) public {\n        require(claimedTickets[eh] == false);\n        require(freeTickets > 0);\n        freeTickets--;\n        claimedTickets[eh] = true;\n    }\n    function checkTicket(bytes32 eh) public view returns (bool) {\n        return claimedTickets[eh];\n    }\n}\n",
+  "bytecode": "0x608060405234801561001057600080fd5b506002600160026101000a81548161ffff021916908361ffff160217905550600160029054906101000a900461ffff16600160006101000a81548161ffff021916908361ffff1602179055506040805190810160405280600381526020017f54434b0000000000000000000000000000000000000000000000000000000000815250600290805190602001906100a79291906100ad565b50610152565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100ee57805160ff191683800117855561011c565b8280016001018555821561011c579182015b8281111561011b578251825591602001919060010190610100565b5b509050610129919061012d565b5090565b61014f91905b8082111561014b576000816000905550600101610133565b5090565b90565b6104cb806101616000396000f300608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde031461007d57806318160ddd1461010d5780635aaa8be81461014057806360f67b5714610173578063ba91f717146101bc578063ed9d4ce714610205575b600080fd5b34801561008957600080fd5b50610092610236565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100d25780820151818401526020810190506100b7565b50505050905090810190601f1680156100ff5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561011957600080fd5b506101226102d4565b604051808261ffff1661ffff16815260200191505060405180910390f35b34801561014c57600080fd5b506101556102e8565b604051808261ffff1661ffff16815260200191505060405180910390f35b34801561017f57600080fd5b506101a260048036038101908080356000191690602001909291905050506102fc565b604051808215151515815260200191505060405180910390f35b3480156101c857600080fd5b506101eb600480360381019080803560001916906020019092919050505061031c565b604051808215151515815260200191505060405180910390f35b34801561021157600080fd5b50610234600480360381019080803560001916906020019092919050505061034d565b005b60028054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102cc5780601f106102a1576101008083540402835291602001916102cc565b820191906000526020600020905b8154815290600101906020018083116102af57829003601f168201915b505050505081565b600160029054906101000a900461ffff1681565b600160009054906101000a900461ffff1681565b60006020528060005260406000206000915054906101000a900460ff1681565b6000806000836000191660001916815260200190815260200160002060009054906101000a900460ff169050919050565b60001515600080836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561038757600080fd5b6000600160009054906101000a900461ffff1661ffff161115156103aa57600080fd5b6001600081819054906101000a900461ffff16809291906001900391906101000a81548161ffff021916908361ffff160217905550506000600160009054906101000a900461ffff1661ffff16141561042a577ff04cbd4ac0765eee53b54a9c979903c1f995fc834d1ec4461774b93faa51665460405160405180910390a15b6001600080836000191660001916815260200190815260200160002060006101000a81548160ff0219169083151502179055507fdd4735862e2d97db7309e1a3511813dbe4b9358159883baee880cd68b0b32d058160405180826000191660001916815260200191505060405180910390a1505600a165627a7a72305820eae22a589d00de94958f7f9506c742942f8d2194a545a86544f78fc8944d54720029",
+  "deployedBytecode": "0x608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde031461007d57806318160ddd1461010d5780635aaa8be81461014057806360f67b5714610173578063ba91f717146101bc578063ed9d4ce714610205575b600080fd5b34801561008957600080fd5b50610092610236565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100d25780820151818401526020810190506100b7565b50505050905090810190601f1680156100ff5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561011957600080fd5b506101226102d4565b604051808261ffff1661ffff16815260200191505060405180910390f35b34801561014c57600080fd5b506101556102e8565b604051808261ffff1661ffff16815260200191505060405180910390f35b34801561017f57600080fd5b506101a260048036038101908080356000191690602001909291905050506102fc565b604051808215151515815260200191505060405180910390f35b3480156101c857600080fd5b506101eb600480360381019080803560001916906020019092919050505061031c565b604051808215151515815260200191505060405180910390f35b34801561021157600080fd5b50610234600480360381019080803560001916906020019092919050505061034d565b005b60028054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102cc5780601f106102a1576101008083540402835291602001916102cc565b820191906000526020600020905b8154815290600101906020018083116102af57829003601f168201915b505050505081565b600160029054906101000a900461ffff1681565b600160009054906101000a900461ffff1681565b60006020528060005260406000206000915054906101000a900460ff1681565b6000806000836000191660001916815260200190815260200160002060009054906101000a900460ff169050919050565b60001515600080836000191660001916815260200190815260200160002060009054906101000a900460ff16151514151561038757600080fd5b6000600160009054906101000a900461ffff1661ffff161115156103aa57600080fd5b6001600081819054906101000a900461ffff16809291906001900391906101000a81548161ffff021916908361ffff160217905550506000600160009054906101000a900461ffff1661ffff16141561042a577ff04cbd4ac0765eee53b54a9c979903c1f995fc834d1ec4461774b93faa51665460405160405180910390a15b6001600080836000191660001916815260200190815260200160002060006101000a81548160ff0219169083151502179055507fdd4735862e2d97db7309e1a3511813dbe4b9358159883baee880cd68b0b32d058160405180826000191660001916815260200191505060405180910390a1505600a165627a7a72305820eae22a589d00de94958f7f9506c742942f8d2194a545a86544f78fc8944d54720029",
+  "sourceMap": "25:745:0:-;;;190:110;8:9:-1;5:2;;;30:1;27;20:12;5:2;190:110:0;235:1;221:11;;:15;;;;;;;;;;;;;;;;;;260:11;;;;;;;;;;;246;;:25;;;;;;;;;;;;;;;;;;281:12;;;;;;;;;;;;;;;;;;:4;:12;;;;;;;;;;;;:::i;:::-;;25:745;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "25:745:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;166:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;166:18:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;166:18:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;135:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;135:25:0;;;;;;;;;;;;;;;;;;;;;;;;;;;104;;8:9:-1;5:2;;;30:1;27;20:12;5:2;104:25:0;;;;;;;;;;;;;;;;;;;;;;;;;;;52:46;;8:9:-1;5:2;;;30:1;27;20:12;5:2;52:46:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;601:102;;8:9:-1;5:2;;;30:1;27;20:12;5:2;601:102:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;305:291;;8:9:-1;5:2;;;30:1;27;20:12;5:2;305:291:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;166:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;135:25::-;;;;;;;;;;;;;:::o;104:::-;;;;;;;;;;;;;:::o;52:46::-;;;;;;;;;;;;;;;;;;;;;;:::o;601:102::-;655:4;678:14;:18;693:2;678:18;;;;;;;;;;;;;;;;;;;;;;;;;;;671:25;;601:102;;;:::o;305:291::-;385:5;363:27;;:14;:18;378:2;363:18;;;;;;;;;;;;;;;;;;;;;;;;;;;:27;;;355:36;;;;;;;;423:1;409:11;;;;;;;;;;;:15;;;401:24;;;;;;;;435:11;;:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;476:1;461:11;;;;;;;;;;;:16;;;458:65;;;497:15;;;;;;;;;;458:65;553:4;532:14;:18;547:2;532:18;;;;;;;;;;;;;;;;;;:25;;;;;;;;;;;;;;;;;;572:17;586:2;572:17;;;;;;;;;;;;;;;;;;;;;;;;305:291;:::o",
+  "source": "pragma solidity ^0.4.18;\ncontract EventTicket {\n    mapping(bytes32 => bool) public claimedTickets;\n    uint16 public freeTickets;\n    uint16 public totalSupply;\n    string public name;\n    constructor() public {\n        totalSupply = 2;\n        freeTickets = totalSupply;\n        name = \"TCK\";\n    }\n    function claimTicket(bytes32 eh) public {\n        require(claimedTickets[eh] == false);\n        require(freeTickets > 0);\n        freeTickets--;\n        if(freeTickets == 0){\n            emit NoMoreTickets();\n        }\n        claimedTickets[eh] = true;\n        emit TicketClaimed(eh);\n    }\n    function checkTicket(bytes32 eh) public view returns (bool) {\n        return claimedTickets[eh];\n    }\n\n    event TicketClaimed(bytes32 eh);\n    event NoMoreTickets();\n}\n",
   "sourcePath": "/home/mariorodriguez/Beeva/poc-truffle/EventTicket/contracts/EventTicket.sol",
   "ast": {
     "absolutePath": "/home/mariorodriguez/Beeva/poc-truffle/EventTicket/contracts/EventTicket.sol",
     "exportedSymbols": {
       "EventTicket": [
-        69
+        87
       ]
     },
-    "id": 70,
+    "id": 88,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -135,9 +153,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 69,
+        "id": 87,
         "linearizedBaseContracts": [
-          69
+          87
         ],
         "name": "EventTicket",
         "nodeType": "ContractDefinition",
@@ -147,7 +165,7 @@
             "id": 5,
             "name": "claimedTickets",
             "nodeType": "VariableDeclaration",
-            "scope": 69,
+            "scope": 87,
             "src": "52:46:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -192,7 +210,7 @@
             "id": 7,
             "name": "freeTickets",
             "nodeType": "VariableDeclaration",
-            "scope": 69,
+            "scope": 87,
             "src": "104:25:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -218,7 +236,7 @@
             "id": 9,
             "name": "totalSupply",
             "nodeType": "VariableDeclaration",
-            "scope": 69,
+            "scope": 87,
             "src": "135:25:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -244,7 +262,7 @@
             "id": 11,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 69,
+            "scope": 87,
             "src": "166:18:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -442,7 +460,7 @@
               "parameters": [],
               "src": "211:0:0"
             },
-            "scope": 69,
+            "scope": 87,
             "src": "190:110:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -450,9 +468,9 @@
           },
           {
             "body": {
-              "id": 55,
+              "id": 67,
               "nodeType": "Block",
-              "src": "345:145:0",
+              "src": "345:251:0",
               "statements": [
                 {
                   "expression": {
@@ -547,10 +565,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        87,
-                        88
+                        105,
+                        106
                       ],
-                      "referencedDeclaration": 87,
+                      "referencedDeclaration": 105,
                       "src": "355:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -641,10 +659,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        87,
-                        88
+                        105,
+                        106
                       ],
-                      "referencedDeclaration": 87,
+                      "referencedDeclaration": 105,
                       "src": "401:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -704,9 +722,107 @@
                   "src": "435:13:0"
                 },
                 {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    },
+                    "id": 51,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 49,
+                      "name": "freeTickets",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "461:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint16",
+                        "typeString": "uint16"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 50,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "476:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "461:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 56,
+                  "nodeType": "IfStatement",
+                  "src": "458:65:0",
+                  "trueBody": {
+                    "id": 55,
+                    "nodeType": "Block",
+                    "src": "478:45:0",
+                    "statements": [
+                      {
+                        "eventCall": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 52,
+                            "name": "NoMoreTickets",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 86,
+                            "src": "497:13:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
+                              "typeString": "function ()"
+                            }
+                          },
+                          "id": 53,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "497:15:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 54,
+                        "nodeType": "EmitStatement",
+                        "src": "492:20:0"
+                      }
+                    ]
+                  }
+                },
+                {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 53,
+                    "id": 61,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -715,26 +831,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 49,
+                        "id": 57,
                         "name": "claimedTickets",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 5,
-                        "src": "458:14:0",
+                        "src": "532:14:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
                           "typeString": "mapping(bytes32 => bool)"
                         }
                       },
-                      "id": 51,
+                      "id": 59,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 50,
+                        "id": 58,
                         "name": "eh",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 29,
-                        "src": "473:2:0",
+                        "src": "547:2:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -745,7 +861,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "458:18:0",
+                      "src": "532:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -756,14 +872,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 52,
+                      "id": 60,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "479:4:0",
+                      "src": "553:4:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -771,20 +887,74 @@
                       },
                       "value": "true"
                     },
-                    "src": "458:25:0",
+                    "src": "532:25:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 54,
+                  "id": 62,
                   "nodeType": "ExpressionStatement",
-                  "src": "458:25:0"
+                  "src": "532:25:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 64,
+                        "name": "eh",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29,
+                        "src": "586:2:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 63,
+                      "name": "TicketClaimed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 84,
+                      "src": "572:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bytes32_$returns$__$",
+                        "typeString": "function (bytes32)"
+                      }
+                    },
+                    "id": 65,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "572:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 66,
+                  "nodeType": "EmitStatement",
+                  "src": "567:22:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 56,
+            "id": 68,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -800,7 +970,7 @@
                   "id": 29,
                   "name": "eh",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56,
+                  "scope": 68,
                   "src": "326:10:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -831,43 +1001,43 @@
               "parameters": [],
               "src": "345:0:0"
             },
-            "scope": 69,
-            "src": "305:185:0",
+            "scope": 87,
+            "src": "305:291:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 67,
+              "id": 79,
               "nodeType": "Block",
-              "src": "555:42:0",
+              "src": "661:42:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 63,
+                      "id": 75,
                       "name": "claimedTickets",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 5,
-                      "src": "572:14:0",
+                      "src": "678:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
                         "typeString": "mapping(bytes32 => bool)"
                       }
                     },
-                    "id": 65,
+                    "id": 77,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 64,
+                      "id": 76,
                       "name": "eh",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 58,
-                      "src": "587:2:0",
+                      "referencedDeclaration": 70,
+                      "src": "693:2:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
@@ -878,21 +1048,21 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "572:18:0",
+                    "src": "678:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 62,
-                  "id": 66,
+                  "functionReturnParameters": 74,
+                  "id": 78,
                   "nodeType": "Return",
-                  "src": "565:25:0"
+                  "src": "671:25:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 68,
+            "id": 80,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -900,16 +1070,16 @@
             "name": "checkTicket",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 59,
+              "id": 71,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58,
+                  "id": 70,
                   "name": "eh",
                   "nodeType": "VariableDeclaration",
-                  "scope": 68,
-                  "src": "516:10:0",
+                  "scope": 80,
+                  "src": "622:10:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -917,10 +1087,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 57,
+                    "id": 69,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "516:7:0",
+                    "src": "622:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -930,20 +1100,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "515:12:0"
+              "src": "621:12:0"
             },
             "payable": false,
             "returnParameters": {
-              "id": 62,
+              "id": 74,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 61,
+                  "id": 73,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 68,
-                  "src": "549:4:0",
+                  "scope": 80,
+                  "src": "655:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -951,10 +1121,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 60,
+                    "id": 72,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "549:4:0",
+                    "src": "655:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -964,29 +1134,85 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "548:6:0"
+              "src": "654:6:0"
             },
-            "scope": 69,
-            "src": "495:102:0",
+            "scope": 87,
+            "src": "601:102:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 84,
+            "name": "TicketClaimed",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 83,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 82,
+                  "indexed": false,
+                  "name": "eh",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 84,
+                  "src": "729:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 81,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "729:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "728:12:0"
+            },
+            "src": "709:32:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 86,
+            "name": "NoMoreTickets",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 85,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "765:2:0"
+            },
+            "src": "746:22:0"
           }
         ],
-        "scope": 70,
-        "src": "25:574:0"
+        "scope": 88,
+        "src": "25:745:0"
       }
     ],
-    "src": "0:600:0"
+    "src": "0:771:0"
   },
   "legacyAST": {
     "absolutePath": "/home/mariorodriguez/Beeva/poc-truffle/EventTicket/contracts/EventTicket.sol",
     "exportedSymbols": {
       "EventTicket": [
-        69
+        87
       ]
     },
-    "id": 70,
+    "id": 88,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -1006,9 +1232,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 69,
+        "id": 87,
         "linearizedBaseContracts": [
-          69
+          87
         ],
         "name": "EventTicket",
         "nodeType": "ContractDefinition",
@@ -1018,7 +1244,7 @@
             "id": 5,
             "name": "claimedTickets",
             "nodeType": "VariableDeclaration",
-            "scope": 69,
+            "scope": 87,
             "src": "52:46:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1063,7 +1289,7 @@
             "id": 7,
             "name": "freeTickets",
             "nodeType": "VariableDeclaration",
-            "scope": 69,
+            "scope": 87,
             "src": "104:25:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1089,7 +1315,7 @@
             "id": 9,
             "name": "totalSupply",
             "nodeType": "VariableDeclaration",
-            "scope": 69,
+            "scope": 87,
             "src": "135:25:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1115,7 +1341,7 @@
             "id": 11,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 69,
+            "scope": 87,
             "src": "166:18:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1313,7 +1539,7 @@
               "parameters": [],
               "src": "211:0:0"
             },
-            "scope": 69,
+            "scope": 87,
             "src": "190:110:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1321,9 +1547,9 @@
           },
           {
             "body": {
-              "id": 55,
+              "id": 67,
               "nodeType": "Block",
-              "src": "345:145:0",
+              "src": "345:251:0",
               "statements": [
                 {
                   "expression": {
@@ -1418,10 +1644,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        87,
-                        88
+                        105,
+                        106
                       ],
-                      "referencedDeclaration": 87,
+                      "referencedDeclaration": 105,
                       "src": "355:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1512,10 +1738,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        87,
-                        88
+                        105,
+                        106
                       ],
-                      "referencedDeclaration": 87,
+                      "referencedDeclaration": 105,
                       "src": "401:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1575,9 +1801,107 @@
                   "src": "435:13:0"
                 },
                 {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    },
+                    "id": 51,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 49,
+                      "name": "freeTickets",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7,
+                      "src": "461:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint16",
+                        "typeString": "uint16"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 50,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "476:1:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "461:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 56,
+                  "nodeType": "IfStatement",
+                  "src": "458:65:0",
+                  "trueBody": {
+                    "id": 55,
+                    "nodeType": "Block",
+                    "src": "478:45:0",
+                    "statements": [
+                      {
+                        "eventCall": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 52,
+                            "name": "NoMoreTickets",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 86,
+                            "src": "497:13:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_event_nonpayable$__$returns$__$",
+                              "typeString": "function ()"
+                            }
+                          },
+                          "id": 53,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "497:15:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 54,
+                        "nodeType": "EmitStatement",
+                        "src": "492:20:0"
+                      }
+                    ]
+                  }
+                },
+                {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 53,
+                    "id": 61,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1586,26 +1910,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 49,
+                        "id": 57,
                         "name": "claimedTickets",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 5,
-                        "src": "458:14:0",
+                        "src": "532:14:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
                           "typeString": "mapping(bytes32 => bool)"
                         }
                       },
-                      "id": 51,
+                      "id": 59,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 50,
+                        "id": 58,
                         "name": "eh",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 29,
-                        "src": "473:2:0",
+                        "src": "547:2:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -1616,7 +1940,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "458:18:0",
+                      "src": "532:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -1627,14 +1951,14 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 52,
+                      "id": 60,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "479:4:0",
+                      "src": "553:4:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1642,20 +1966,74 @@
                       },
                       "value": "true"
                     },
-                    "src": "458:25:0",
+                    "src": "532:25:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 54,
+                  "id": 62,
                   "nodeType": "ExpressionStatement",
-                  "src": "458:25:0"
+                  "src": "532:25:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 64,
+                        "name": "eh",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29,
+                        "src": "586:2:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 63,
+                      "name": "TicketClaimed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 84,
+                      "src": "572:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bytes32_$returns$__$",
+                        "typeString": "function (bytes32)"
+                      }
+                    },
+                    "id": 65,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "572:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 66,
+                  "nodeType": "EmitStatement",
+                  "src": "567:22:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 56,
+            "id": 68,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1671,7 +2049,7 @@
                   "id": 29,
                   "name": "eh",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56,
+                  "scope": 68,
                   "src": "326:10:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1702,43 +2080,43 @@
               "parameters": [],
               "src": "345:0:0"
             },
-            "scope": 69,
-            "src": "305:185:0",
+            "scope": 87,
+            "src": "305:291:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 67,
+              "id": 79,
               "nodeType": "Block",
-              "src": "555:42:0",
+              "src": "661:42:0",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 63,
+                      "id": 75,
                       "name": "claimedTickets",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 5,
-                      "src": "572:14:0",
+                      "src": "678:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_bytes32_$_t_bool_$",
                         "typeString": "mapping(bytes32 => bool)"
                       }
                     },
-                    "id": 65,
+                    "id": 77,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 64,
+                      "id": 76,
                       "name": "eh",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 58,
-                      "src": "587:2:0",
+                      "referencedDeclaration": 70,
+                      "src": "693:2:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
@@ -1749,21 +2127,21 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "572:18:0",
+                    "src": "678:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 62,
-                  "id": 66,
+                  "functionReturnParameters": 74,
+                  "id": 78,
                   "nodeType": "Return",
-                  "src": "565:25:0"
+                  "src": "671:25:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 68,
+            "id": 80,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1771,16 +2149,16 @@
             "name": "checkTicket",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 59,
+              "id": 71,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 58,
+                  "id": 70,
                   "name": "eh",
                   "nodeType": "VariableDeclaration",
-                  "scope": 68,
-                  "src": "516:10:0",
+                  "scope": 80,
+                  "src": "622:10:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1788,10 +2166,10 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 57,
+                    "id": 69,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "516:7:0",
+                    "src": "622:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1801,20 +2179,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "515:12:0"
+              "src": "621:12:0"
             },
             "payable": false,
             "returnParameters": {
-              "id": 62,
+              "id": 74,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 61,
+                  "id": 73,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 68,
-                  "src": "549:4:0",
+                  "scope": 80,
+                  "src": "655:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1822,10 +2200,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 60,
+                    "id": 72,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "549:4:0",
+                    "src": "655:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1835,20 +2213,76 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "548:6:0"
+              "src": "654:6:0"
             },
-            "scope": 69,
-            "src": "495:102:0",
+            "scope": 87,
+            "src": "601:102:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 84,
+            "name": "TicketClaimed",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 83,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 82,
+                  "indexed": false,
+                  "name": "eh",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 84,
+                  "src": "729:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 81,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "729:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "728:12:0"
+            },
+            "src": "709:32:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 86,
+            "name": "NoMoreTickets",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 85,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "765:2:0"
+            },
+            "src": "746:22:0"
           }
         ],
-        "scope": 70,
-        "src": "25:574:0"
+        "scope": 88,
+        "src": "25:745:0"
       }
     ],
-    "src": "0:600:0"
+    "src": "0:771:0"
   },
   "compiler": {
     "name": "solc",
@@ -1858,10 +2292,10 @@
     "4447": {
       "events": {},
       "links": {},
-      "address": "0x98d9f9e8debd4a632682ba207670d2a5acd3c489",
-      "transactionHash": "0x4b7242120f3c43c35bec07b7ba94abd227f2418514f51d30890feb4ab3982a97"
+      "address": "0x345ca3e014aaf5dca488057592ee47305d9b3e10",
+      "transactionHash": "0x5c72c1112887799124382b0900354cc469a44614f08364388eecf4f3f68c3a9b"
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-04-25T14:28:46.516Z"
+  "updatedAt": "2018-04-25T14:32:10.302Z"
 }
