@@ -4,10 +4,10 @@ contract EventTicket {
     uint16 public freeTickets;
     uint16 public totalSupply;
     string public name;
-    constructor() public {
-        totalSupply = 2;
+    constructor(uint16 initialSupply, string ticketName) public {
+        totalSupply = initialSupply;
         freeTickets = totalSupply;
-        name = "TCK";
+        name = ticketName;
     }
     function claimTicket(bytes32 eh) public {
         require(claimedTickets[eh] == false);
