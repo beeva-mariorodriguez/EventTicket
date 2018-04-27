@@ -9,7 +9,7 @@ contract EventTicket {
         name = ticketName;
         availableTickets = totalSupply;
     }
-    function claimTicket(bytes32 eh) public {
+    function claimTicket(bytes32 eh) public returns(bytes32) {
         require(claimedTickets[eh] == false);
         require(availableTickets > 0);
         availableTickets--;
@@ -18,16 +18,18 @@ contract EventTicket {
         }
         claimedTickets[eh] = true;
         emit TicketClaimed(eh);
+        return eh;
     }
     function checkTicket(bytes32 eh) public view returns (bool) {
         return claimedTickets[eh];
     }
-    function freeTicket(bytes32 eh) public {
+    function freeTicket(bytes32 eh) public returns (bytes32) {
         require(claimedTickets[eh] == true);
         claimedTickets[eh] = false;
         emit TicketFreed(eh);
         availableTickets++;
         claimedTickets[eh] = false;
+        return eh;
     }
 
     event TicketClaimed(bytes32 eh);
