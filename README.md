@@ -44,3 +44,8 @@ truffle(development)> EventTicket.at("0x345ca3e014aaf5dca488057592ee47305d9b3e10
 BigNumber { s: 1, e: 0, c: [ 9 ] }
 ```
 
+## testing web3
+* ``npm install``
+* ``npm run dev``
+* point browser to ``http://localhost:3000``
+
