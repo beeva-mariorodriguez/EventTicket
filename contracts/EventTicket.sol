@@ -31,6 +31,10 @@ contract EventTicket {
         claimedTickets[eh] = false;
         return eh;
     }
+    function getHash(string email) public pure returns (bytes32) {
+        bytes32 eh = sha256(email);
+        return eh;
+    }
 
     event TicketClaimed(bytes32 eh);
     event TicketFreed(bytes32 eh);
