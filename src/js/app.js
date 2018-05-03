@@ -25,19 +25,12 @@ App = {
   initContract: function(){
 
     $.getJSON('EventTicket.json', function(data) {
-      // Get the necessary contract artifact file and instantiate it with truffle-contract
+      
       var EventTicketArtifact = data;
       App.contracts.EventTicket = TruffleContract(EventTicketArtifact);
     
-      // Set the provider for our contract
       App.contracts.EventTicket.setProvider(App.web3Provider);
    
-
-
-
-    //}
- 
-      // Use our contract to retrieve and mark the adopted pets
       return ;
     });
 
@@ -46,29 +39,52 @@ App = {
 
   bindEvents: function() {
       $(document).on('click', '.btn-claimTicket', App.claimTicket);
+      $(document).on('click', '.btn-freeTicket', App.freeTicket);
     
   },
 
 
 
-  claimedTicket: function(event){
 
-      alert("ticket been claimed!");
+  freeTicket: function(event){
+
+    event.preventDefault();
+    web3.eth.getAccounts(function(error, accounts) {
+      if (error) {
+        alert(error);
+        console.log(error);
+      }
+    
+      var account = accounts[0];
+
+      App.contracts.EventTicket.deployed().then(function(instance) {
+        
+        return instance.freeTicket(document.getElementById("ticketHash").value,{from: account});
+
+      }).then(function(result) {
+         for (var i = 0; i < result.logs.length; i++) {
+             var log = result.logs[i];
+
+             console.log(log);
+
+             if (log.event == "TicketFreed") {
+               alert("Freed Ticket!");
+               break;
+             }
+             
+  }
+      }).catch(function(err) {
+        alert("Ticket couldn't be freed")
+        console.log(err);
+      });
+    });
 
   },
 
-  soldOut: function(event){
-
-      alert("sold out!");
-
-  },
 
 
   claimTicket: function(event){
 
-    alert("button pressed");
-
-    //qué hace esta línea?
     event.preventDefault();
 
     web3.eth.getAccounts(function(error, accounts) {
@@ -79,15 +95,29 @@ App = {
     
       var account = accounts[0];
 
-      alert(account);
 
       App.contracts.EventTicket.deployed().then(function(instance) {
         
-        // Execute claimTicket as a transaction by sending account
-        return instance.claimTicket(434345, {from: account});
+        return instance.claimTicket(sha256(document.getElementById("email").value), {from: account});
       }).then(function(result) {
-        alert("claimed ticket!");
+         for (var i = 0; i < result.logs.length; i++) {
+             var log = result.logs[i];
+
+             console.log(log);
+             if (log.event == "NoMoreTickets") {
+               alert("No tickets available!");
+               break;
+             }
+             
+             if (log.event == "TicketClaimed") {
+               alert("Ticket hash "+log.args.eh);
+               break;
+             }
+
+
+  }
       }).catch(function(err) {
+        alert("Ticket couldn't be claimed")
         console.log(err.message);
       });
     });
